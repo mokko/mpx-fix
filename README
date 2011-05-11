@@ -1,0 +1,1 @@
+mpx-fix.xsl is a transformation which expects mpx-lvl2 as input and output. It improves the content, e.g. makes it more regular, corrects some obvious mistakes. and omissions etc.
