@@ -1,1 +1,29 @@
-mpx-fix.xsl is a transformation which expects mpx-lvl2 as input and output. It improves the content, e.g. makes it more regular, corrects some obvious mistakes. and omissions etc.
+mpx-fix.xsl is a transformation which expects mpx-lvl2 as input and output. It
+improves the content, e.g. makes it more regular, corrects some obvious
+mistakes and omissions etc.
+
+This is the new version of the transformation. It is written for MIMO and
+discards a lot of stuff that is only for sound recordings. Long term goal is to
+have only one version of this script, but I cannot accomplish this within the
+MIMO project.
+
+Alter README Text:
+Dieses Skript soll solche Fehler in den Daten von MPX
+beheben, bei denen es sich lohnt sie programmatisch zu korrigieren.
+
+Es gibt zwei Vorgaben:
+1. Dieses Skript soll keine neuen Fehler erzeugen, selbst wenn es
+auf verkehrte Daten angewandt wird. Das gilt insbesondere f�r den
+Fall, das der Fehler in M+ irgendwann behoben wird.
+
+2. Dokumentation. Alle -Fixes, die von diesem Skript behoben
+werden, sollen gut dokumentiert werden. Sie werden beim Ablaufen
+des Skripts per xsl:message ausgegeben, um sie dann per Dos (igitt!)
+in eine eigene Logdatei geschrieben zu werden. Ich habe dazu ein simples
+xml Format erfunden (mpxfix.xsd) und beschrieben.
+
+Maßgabe beim Fixen ist, das Fehler und fehlende (weil als selbstverst�ndlich
+angesehene) Infos ergänzt werden. Als Ergebnis des Fixens sollen möglichst
+Daten erzeugt werden, die gültiges MuseumPlusDaten sind. Es gibt allerdings
+einige Außnahmen von dieser Regel.
+
